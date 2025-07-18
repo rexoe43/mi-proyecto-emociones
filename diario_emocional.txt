@@ -1,0 +1,50 @@
+[2025-07-17 22:41:09][HAPPY] pasar con mi familia
+
+==================================================
+FECHA: 2025-07-17 22:47:02
+EMOCIÓN: HAPPY
+PREGUNTA: ¿Qué te hizo sentir feliz hoy?
+RESPUESTA: Pasara con mi familia
+==================================================
+
+==================================================
+FECHA: 2025-07-17 22:47:09
+EMOCIÓN: HAPPY
+PREGUNTA: ¿Qué te hizo sentir feliz hoy?
+RESPUESTA: claro
+==================================================
+
+==================================================
+FECHA: 2025-07-17 22:47:17
+EMOCIÓN: HAPPY
+PREGUNTA: ¿Qué te hizo sentir feliz hoy?
+RESPUESTA: con mi familia
+==================================================
+
+==================================================
+FECHA: 2025-07-17 22:47:23
+EMOCIÓN: HAPPY
+PREGUNTA: ¿Qué te hizo sentir feliz hoy?
+RESPUESTA: si
+==================================================
+
+==================================================
+FECHA: 2025-07-17 22:49:33
+EMOCIÓN: HAPPY
+PREGUNTA: ¿Qué te hizo sentir feliz hoy?
+RESPUESTA: pasar con mi familia
+==================================================
+
+==================================================
+FECHA: 2025-07-17 22:49:39
+EMOCIÓN: HAPPY
+PREGUNTA: ¿Qué te hizo sentir feliz hoy?
+RESPUESTA: si
+==================================================
+
+==================================================
+FECHA: 2025-07-17 22:49:53
+EMOCIÓN: HAPPY
+PREGUNTA: ¿Qué te hizo sentir feliz hoy?
+RESPUESTA: con mi familia
+==================================================
