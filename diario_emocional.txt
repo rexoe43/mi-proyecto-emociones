@@ -48,3 +48,227 @@ EMOCIÓN: HAPPY
 PREGUNTA: ¿Qué te hizo sentir feliz hoy?
 RESPUESTA: con mi familia
 ==================================================
+
+==================================================
+FECHA: 2025-07-18 14:45:59
+EMOCIÓN: HAPPY
+PREGUNTA: ¿Quieres guardar este recuerdo?
+RESPUESTA: si
+==================================================
+
+==================================================
+FECHA: 2025-07-18 14:46:14
+EMOCIÓN: HAPPY
+PREGUNTA: ¿Quieres guardar este recuerdo?
+RESPUESTA: Salir a jugar con mis amigos y ir al gimnasio
+==================================================
+
+==================================================
+FECHA: 2025-07-18 14:46:22
+EMOCIÓN: HAPPY
+PREGUNTA: ¿Quieres guardar este recuerdo?
+RESPUESTA: Con mis amigos
+==================================================
+
+==================================================
+FECHA: 2025-07-18 14:47:33
+EMOCIÓN: HAPPY
+PREGUNTA: ¿Qué fue lo más divertido del día?
+RESPUESTA: Ir al gimnasio
+==================================================
+
+==================================================
+FECHA: 2025-07-18 14:47:40
+EMOCIÓN: HAPPY
+PREGUNTA: ¿Qué fue lo más divertido del día?
+RESPUESTA: si
+==================================================
+
+==================================================
+FECHA: 2025-07-18 14:47:45
+EMOCIÓN: HAPPY
+PREGUNTA: ¿Qué fue lo más divertido del día?
+RESPUESTA: con mis amigos
+==================================================
+
+==================================================
+FECHA: 2025-07-18 14:47:56
+EMOCIÓN: HAPPY
+PREGUNTA: ¿Qué fue lo más divertido del día?
+RESPUESTA: pasar con mis amigos
+==================================================
+
+==================================================
+FECHA: 2025-07-18 14:48:09
+EMOCIÓN: HAPPY
+PREGUNTA: ¿Qué fue lo más divertido del día?
+RESPUESTA: ir al gimasio
+==================================================
+
+==================================================
+FECHA: 2025-07-18 14:58:23
+EMOCIÓN: FEAR
+PREGUNTA: ¿Qué te causó miedo?
+RESPUESTA: sw
+==================================================
+
+==================================================
+FECHA: 2025-07-18 14:58:28
+EMOCIÓN: FEAR
+PREGUNTA: ¿Qué te causó miedo?
+RESPUESTA: si
+==================================================
+
+==================================================
+FECHA: 2025-07-18 15:01:02
+EMOCIÓN: HAPPY
+PREGUNTA: ¿Con quién compartiste ese momento especial?
+RESPUESTA: con mi familia
+==================================================
+
+==================================================
+FECHA: 2025-07-18 15:01:12
+EMOCIÓN: HAPPY
+PREGUNTA: ¿Con quién compartiste ese momento especial?
+RESPUESTA: si
+==================================================
+
+==================================================
+FECHA: 2025-07-18 15:01:22
+EMOCIÓN: HAPPY
+PREGUNTA: ¿Con quién compartiste ese momento especial?
+RESPUESTA: jugar futbol y ganar
+==================================================
+
+==================================================
+FECHA: 2025-07-18 15:01:32
+EMOCIÓN: HAPPY
+PREGUNTA: ¿Con quién compartiste ese momento especial?
+RESPUESTA: mi familia
+==================================================
+
+==================================================
+FECHA: 2025-07-18 15:02:45
+EMOCIÓN: HAPPY
+PREGUNTA: ¿Qué te hizo sentir feliz hoy?
+RESPUESTA: pasar con mi familia
+==================================================
+
+==================================================
+FECHA: 2025-07-18 15:02:51
+EMOCIÓN: HAPPY
+PREGUNTA: ¿Qué te hizo sentir feliz hoy?
+RESPUESTA: con mi familia
+==================================================
+
+==================================================
+FECHA: 2025-07-18 15:02:59
+EMOCIÓN: HAPPY
+PREGUNTA: ¿Qué te hizo sentir feliz hoy?
+RESPUESTA: pasar con ellos
+==================================================
+
+==================================================
+FECHA: 2025-07-18 15:03:06
+EMOCIÓN: HAPPY
+PREGUNTA: ¿Qué te hizo sentir feliz hoy?
+RESPUESTA: jugar volley
+==================================================
+
+==================================================
+FECHA: 2025-07-18 15:48:24
+EMOCIÓN: HAPPY
+PREGUNTA: ¿Qué fue lo más divertido del día?
+RESPUESTA: hola
+==================================================
+
+==================================================
+FECHA: 2025-07-18 15:48:31
+EMOCIÓN: HAPPY
+PREGUNTA: ¿Qué fue lo más divertido del día?
+RESPUESTA: con mi familia
+==================================================
+
+==================================================
+FECHA: 2025-07-18 15:48:39
+EMOCIÓN: HAPPY
+PREGUNTA: ¿Qué fue lo más divertido del día?
+RESPUESTA: con mi familia
+==================================================
+
+==================================================
+FECHA: 2025-07-18 15:48:48
+EMOCIÓN: HAPPY
+PREGUNTA: ¿Qué fue lo más divertido del día?
+RESPUESTA: si
+==================================================
+
+==================================================
+FECHA: 2025-07-18 15:49:01
+EMOCIÓN: HAPPY
+PREGUNTA: ¿Qué fue lo más divertido del día?
+RESPUESTA: con mi familia
+==================================================
+
+==================================================
+FECHA: 2025-07-18 16:03:41
+EMOCIÓN: HAPPY
+PREGUNTA: ¿Qué fue lo más divertido del día?
+RESPUESTA: jugar volley
+==================================================
+
+==================================================
+FECHA: 2025-07-18 16:03:49
+EMOCIÓN: HAPPY
+PREGUNTA: ¿Qué fue lo más divertido del día?
+RESPUESTA: mis amigos
+==================================================
+
+==================================================
+FECHA: 2025-07-18 16:03:54
+EMOCIÓN: HAPPY
+PREGUNTA: ¿Qué fue lo más divertido del día?
+RESPUESTA: si
+==================================================
+
+==================================================
+FECHA: 2025-07-18 16:28:18
+EMOCIÓN: HAPPY
+PREGUNTA: ¿Qué te hizo sentir feliz hoy?
+RESPUESTA: pasar con mi faamilia
+==================================================
+
+==================================================
+FECHA: 2025-07-18 16:28:24
+EMOCIÓN: HAPPY
+PREGUNTA: ¿Qué te hizo sentir feliz hoy?
+RESPUESTA: si
+==================================================
+
+==================================================
+FECHA: 2025-07-18 16:28:31
+EMOCIÓN: HAPPY
+PREGUNTA: ¿Qué te hizo sentir feliz hoy?
+RESPUESTA: con mi papi
+==================================================
+
+==================================================
+FECHA: 2025-07-18 16:32:17
+EMOCIÓN: HAPPY
+PREGUNTA: ¿Quieres guardar este recuerdo?
+RESPUESTA: si, porque estoy en casa
+==================================================
+
+==================================================
+FECHA: 2025-07-18 16:33:50
+EMOCIÓN: HAPPY
+PREGUNTA: ¿Quieres guardar este recuerdo?
+RESPUESTA: quería usar el taladro y no tenía broca
+==================================================
+
+==================================================
+FECHA: 2025-07-18 16:34:06
+EMOCIÓN: HAPPY
+PREGUNTA: ¿Quieres guardar este recuerdo?
+RESPUESTA: que lo logré comprar la broca
+==================================================

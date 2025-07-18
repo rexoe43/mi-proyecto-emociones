@@ -262,11 +262,13 @@ def detectar_emocion_en_camara():
             cv2.putText(frame, status_text, (10, 30), 
                        cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 0), 2)
         
-        # Mostrar controles
-        cv2.putText(frame, "Controles: 'q' = continuar, 'r' = reiniciar", (10, frame.shape[0] - 10), 
+        # Mostrar controles en pantalla completa
+        cv2.putText(frame, "Controles: 'q' = continuar, 'r' = reiniciar, 'esc' = salir de pantalla completa", (10, frame.shape[0] - 10), 
                    cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1)
         
-        # Mostrar video
+        # Mostrar video en pantalla completa
+        cv2.namedWindow("Detector de Emociones Mejorado", cv2.WINDOW_NORMAL)
+        cv2.setWindowProperty("Detector de Emociones Mejorado", cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
         cv2.imshow("Detector de Emociones Mejorado", frame)
         
         key = cv2.waitKey(1) & 0xFF
@@ -276,6 +278,11 @@ def detectar_emocion_en_camara():
             detector.emotion_history = []
             emocion_detectada = None
             print("[INFO] Historial de emociones reiniciado")
+        elif key == 27: #ESC key
+            print("[INFO] Saliendo de pantalla completa...")
+            cv2.setWindowProperty("Detector de Emociones Mejorado", cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_NORMAL)
+            cv2.resizeWindow("Detector de Emociones Mejorado", 640, 480)
+    
     
     cap.release()
     cv2.destroyAllWindows()
@@ -285,7 +292,10 @@ def mostrar_gui(emocion_detectada):
     if emocion_detectada not in preguntas_emociones:
         emocion_detectada = 'neutral'
     
-    pregunta = random.choice(preguntas_emociones[emocion_detectada])
+    # Lista de preguntas disponibles para esta emoción
+    preguntas_disponibles = preguntas_emociones[emocion_detectada].copy()
+    pregunta = random.choice(preguntas_disponibles)
+    preguntas_disponibles.remove(pregunta)
     
     ctk.set_appearance_mode("dark")
     ctk.set_default_color_theme("blue")
@@ -293,6 +303,10 @@ def mostrar_gui(emocion_detectada):
     app = ctk.CTk()
     app.geometry("1000x700")
     app.title("Detector Emocional - Diario Personal")
+
+    # Configurar pantalla completa
+    app.attributes('-fullscreen', True)
+    app.bind('<Escape>', lambda e: app.quit()) # Presiona escape para salir
     
     # Título principal
     title_label = ctk.CTkLabel(
@@ -359,15 +373,66 @@ def mostrar_gui(emocion_detectada):
             guardar_btn.configure(text="Respuesta Guardada ✓", state="disabled")
             
             # Reactivar el botón después de 2 segundos
-            app.after(2000, lambda: [
-                guardar_btn.configure(text="Guardar otra respuesta", state="normal"),
-                pregunta_label.configure(text=random.choice(preguntas_emociones[emocion_detectada]))
-            ])
+            def reactivar_boton():
+                guardar_btn.configure(text="Guardar otra respuesta", state="normal")
+                # Mostrar nueva pregunta si hay disponibles
+                if preguntas_disponibles:
+                    nueva_preg = random.choice(preguntas_disponibles)
+                    preguntas_disponibles.remove(nueva_preg)
+                    pregunta_label.configure(text=nueva_preg)
+
+                    # Si se acabaron las preguntas, deshabilitar el botón "Nueva pregunta"
+                    if not preguntas_disponibles:
+                        nueva_pregunta_btn.configure(
+                            text="Sin más preguntas",
+                            state="disabled",
+                            fg_color="#666666"
+                        )
+                        # Tambien deshabilitar el botón guardar para futuras respuestas
+                        guardar_btn.configure(
+                            text="Todas las preguntas completadas",
+                            state="disabled",
+                            fg_color="#666666"
+                        )
+
+                else:
+                    pregunta_label.configure(text="!Has explorado todas las preguntas para esta emoción! 🎉")
+                    guardar_btn.configure(
+                        text="Todas las preguntas completadas",
+                        state="disabled",
+                        fg_color="#666666"
+                    )
+            
+            app.after(2000, reactivar_boton)
     
     # Función para nueva pregunta
     def nueva_pregunta():
-        nueva_preg = random.choice(preguntas_emociones[emocion_detectada])
-        pregunta_label.configure(text=nueva_preg)
+        if preguntas_disponibles:
+            nueva_preg = random.choice(preguntas_disponibles)
+            preguntas_disponibles.remove(nueva_preg)
+            pregunta_label.configure(text=nueva_preg)
+
+            # Si se acabaron las preguntas, deshabilitar el botón
+            if not preguntas_disponibles:
+                nueva_pregunta_btn.configure(
+                    text="Sin más preguntas",
+                    state="disabled",
+                    fg_color="#666666"
+                )
+
+        else:
+            pregunta_label.configre(text="!Has explorado todas las preguntas para esta emoción! 🎉")
+        
+    # Función para volver a la cámara
+    def volver_a_camara():
+        app.destroy()
+        print("\n🎭 Volviendo a la detección de emociones")
+        nueva_emocion = detectar_emocion_en_camara()
+        if nueva_emocion:
+            print(f"✅ Nueva emoción detectada: {nueva_emocion.upper()}")
+            mostrar_gui(nueva_emocion)
+        else:
+            print("❌ No se detectó una emoción válida")
     
     # Botones
     button_frame = ctk.CTkFrame(app, fg_color="transparent")
@@ -379,9 +444,9 @@ def mostrar_gui(emocion_detectada):
         command=guardar_respuesta,
         font=("Arial", 18),
         height=50,
-        width=200
+        width=180
     )
-    guardar_btn.pack(side="left", padx=10)
+    guardar_btn.pack(side="left", padx=8)
     
     nueva_pregunta_btn = ctk.CTkButton(
         button_frame, 
@@ -389,11 +454,34 @@ def mostrar_gui(emocion_detectada):
         command=nueva_pregunta,
         font=("Arial", 18),
         height=50,
-        width=200,
+        width=180,
         fg_color="#ff6b6b"
     )
-    nueva_pregunta_btn.pack(side="left", padx=10)
+    nueva_pregunta_btn.pack(side="left", padx=8)
     
+    volver_camara_btn = ctk.CTkButton(
+        button_frame,
+        text="Salir a la cámara",
+        command=volver_a_camara,
+        font=("Arial", 18),
+        height=50,
+        width=180,
+        fg_color="#9b59b6"
+    )
+    volver_camara_btn.pack(side="left", padx=8)
+
+    # Controles adicionales
+    controles_frame = ctk.CTkFrame(app, fg_color="transparent")
+    controles_frame.pack(pady=10)
+
+    escape_label = ctk.CTkLabel(
+        controles_frame,
+        text="🎮 Controles: ESC = Salir de pantalla completa |  Cámara: q = Continuar, r = reiniciar ",
+        font=("Arial", 14),
+        text_color="#888888"
+    )
+    escape_label.pack()
+
     # Información adicional
     info_label = ctk.CTkLabel(
         app, 
